@@ -7,48 +7,41 @@ package com.biblioteca1;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 public class App {
-    public static void main(String[] args) throws Exception {
-        ArrayList<Song> playlist = new ArrayList<>();
+    public static void main(String[] args) {
+        Library songLibrary = new Library();
 
-        Song song1 = new Song("Color", "Bachata",
-                "gilbertoDaza.png",
-                "Album Daza",
-                3.37,
-                1,
-                2020);
+        songLibrary.playlist.add(songLibrary.color);
+        songLibrary.playlist.add(songLibrary.me_Llamas);
+        songLibrary.playlist.add(songLibrary.todo_Para_mi);
 
-        Song song2 = new Song("Me Llamas", "Pop",
-                "gilbertoDaza.png",
-                "Album Daza",
-                3.43,
-                2,
-                2017);
-
-        playlist.add(song1);
-        playlist.add(song2);
 
         List<Song> songFiltered = new ArrayList<>();
-        for(Song song : playlist){
-            if(song.getGender().equals("Pop")){
+        for(Song song : songLibrary.playlist){
+            if(song.getGender().equals("Bachata")){  //gender = ['Bachata', 'Pop', 'Tropipop']
                 songFiltered.add(song);
             }
         }
-        System.out.println("Filtrado por Nombre");
-        System.out.println(songFiltered);
 
         List<Song> songFiltered2 = new ArrayList<>();
-        for(Song song : playlist){
-            if(song.getDate().equals(2020)){
+        for(Song song : songLibrary.playlist){
+            if(song.getDate().equals(2020)){  // anios = [2016, 2017, 2018, 2019, 2020]
                 songFiltered2.add(song);
             }
         }
 
-        System.out.println("Filtrado por Anio");
-        System.out.println(songFiltered2);
+        System.out.println("\n");
+        System.out.println("Filtered by Gender: ");
+        for (Song value : songFiltered) {
+            System.out.println("> " + value);
+        }
 
+        System.out.println("\n");
+        System.out.println("Filtered by year: ");
+        for (Song song : songFiltered2) {
+            System.out.println("> " + song);
+        }
 
 
         /*
