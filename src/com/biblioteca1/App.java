@@ -23,6 +23,8 @@ public class App {
         songLibrary.playlist.add(songLibrary.volver_a_Respirar);
         songLibrary.playlist.add(songLibrary.sin_Ti);
         songLibrary.playlist.add(songLibrary.paso_a_Paso);
+        songLibrary.playlist.add(songLibrary.gitana);
+        songLibrary.playlist.add(songLibrary.payaso);
 
         System.out.println("\n");
         System.out.println("------------------------------");
@@ -41,12 +43,13 @@ public class App {
                 - Bachata
                 - Pop
                 - Reggaeton
+                - Salsa
                 """);
         System.out.println("\n");
         System.out.print("Enter the gender of the song to filter: ");
         gender = read.nextLine();
         for(Song song : songLibrary.playlist){
-            if(song.getGender().equals(gender)){  //gender = ['Bachata', 'Pop', 'Tropipop']
+            if(song.getGender().equals(gender)){  //gender = ['Bachata', 'Pop', 'Tropipop','Salsa']
                 songFiltered.add(song);
             }
         }
@@ -55,7 +58,7 @@ public class App {
         System.out.print("Enter the year of the song to filter: ");
         year = read.nextInt();
         for(Song song : songLibrary.playlist){
-            if(song.getDate().equals(year)){  // anios = [2009, 2016, 2017, 2018, 2019, 2020]
+            if(song.getDate().equals(year)){  // anios = [2009, 2015, 2016, 2017, 2018, 2019, 2020]
                 songFiltered2.add(song);
             }
         }

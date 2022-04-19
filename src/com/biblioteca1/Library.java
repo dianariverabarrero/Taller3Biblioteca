@@ -43,4 +43,17 @@ public class Library {
             3.56,
             6,
             2009);
+    Song gitana = new Song("Gitana", "Salsa",
+            "carlosPerez.png",
+            "Album Salseros",
+            3.29,
+            1,
+            2018);
+    Song payaso = new Song("Payaso", "Salsa",
+            "gaelGarcia.png",
+            "Album Salseros",
+            3.40,
+            2,
+            2015);
+
 }
