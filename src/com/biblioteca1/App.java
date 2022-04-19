@@ -12,14 +12,17 @@ package com.biblioteca1;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Comparator;
 
 public class App {
     public static void main(String[] args) {
         Library songLibrary = new Library();
         Scanner read = new Scanner(System.in);
+        
         int year;
         String gender;
-
+        Double duration;
+      
 
         songLibrary.playlist.add(songLibrary.color);
         songLibrary.playlist.add(songLibrary.me_Llamas);
@@ -33,6 +36,7 @@ public class App {
         System.out.println("\n");
         System.out.println("------------------------------");
         System.out.println("My Playlist\n");
+         
 
         int count = songLibrary.playlist.size();
         for (Song song : songLibrary.playlist) {
@@ -57,7 +61,9 @@ public class App {
                 songFiltered.add(song);
             }
         }
-
+        
+        
+        
         List<Song> songFiltered2 = new ArrayList<>();
         System.out.print("Enter the year of the song to filter: ");
         year = read.nextInt();
@@ -66,7 +72,19 @@ public class App {
                 songFiltered2.add(song);
             }
         }
+        
+        System.out.println("\n");
+        System.out.println("Order by duration");
 
+        songLibrary.playlist.sort(Comparator.comparing(Song::getDuration));
+        songLibrary.playlist.forEach((s) -> System.out.println(s));
+
+        System.out.println("\n");
+        System.out.println("Order by date");
+
+        songLibrary.playlist.sort(Comparator.comparing(Song::getDate));
+        songLibrary.playlist.forEach((s) -> System.out.println(s));
+        
         System.out.println("\n");
 
         System.out.println("\n");
