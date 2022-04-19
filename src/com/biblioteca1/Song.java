@@ -5,98 +5,72 @@
  */
 package com.biblioteca1;
 
-/**
- *
- * @author diana
- */
-import java.util.Date;
-
 public class Song {
-    private String title,cover,gender,description; //se reduce línea de código//
+    private String title;
+    private String gender;
+    private String cover;
+    private String description;
+    private Double duration;
     private int id;
-    private Date date;
-    private double duration;
+    private Integer date;
 
+    public Song(){
+    }
 
-
-   /**
-    * Se genera constructor con parámetros
-    * @param title
-    * @param cover
-    * @param gender
-    * @param description
-    * @param id
-    * @param date
-    * @param duration 
-    */
-    public Song(String title, String cover, String gender, String description, int id, Date date, double duration) {
+    public Song(String title, String gender, String cover, String description, Double duration, int id, int date) {
         this.title = title;
-        this.id = id;
-        this.date = date;
-        this.duration = duration;
-        this.cover = cover;
         this.gender = gender;
+        this.cover = cover;
         this.description = description;
-    }
-    
-        public Song() {
-    }
-    
-
-    public String Title() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int Id() {
-        return id;
-    }
-
-    public void setId(int id) {
+        this.duration = duration;
         this.id = id;
-    }
-
-    public Date Date() {
-        return date;
-    }
-
-    public void setDate(Date date) {
         this.date = date;
     }
 
-    public double Duration() {
-        return duration;
-    }
+    public String getTitle() { return this.title;}
 
-    public void Duration(double duration) {
-        this.duration = duration;
-    }
+    public void setTitle(String title) {  this.title = title;  }
 
-    public String Cover() {
-        return cover;
-    }
+    public String getGender() { return this.gender; }
 
-    public void setCover(String cover) {
-        this.cover = cover;
-    }
+    public void setGender(String gender) { this.gender = gender;  }
 
-    public String Gender() {
-        return gender;
-    }
+    public String getCover() { return this.cover; }
 
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
+    public void setCover(String cover) {  this.cover = cover;  }
 
-    public String Description() {
-        return description;
-    }
+    public String getDescription() { return this.description; }
 
     public void setDescription(String description) {
         this.description = description;
     }
-}
 
+    public Double getDuration() { return this.duration;  }
+
+    public void setDuration(Double duration) {
+        this.duration = duration;
+    }
+
+    public int getId() { return this.id;  }
+
+    public void setId(int id) { this.id = id;  }
+
+    public Integer getDate() { return this.date;  }
+
+    public void setDate(Integer date) { this.date = date;  }
+
+
+    @Override
+    public String toString() {
+        return "id: " + id + '\''+
+                ", title: '" + title + '\''+
+                ", gender: " + gender + '\''+
+                ", cover: " + cover + '\''+
+                ", description: " + description + '\''+
+                ", date: " + date + '\''+
+                ", duration: " + duration + '\'';
+    }
+
+
+
+}

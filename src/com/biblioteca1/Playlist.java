@@ -4,53 +4,21 @@
  * and open the template in the editor.
  */
 package com.biblioteca1;
-
-/**
- *
- * @author diana
- */
 import java.util.ArrayList;
 
-    //private String ArrayList name = new ArrayList<>();//
+public class Playlist {
 
+    private ArrayList<Song> playlist;
 
-/**
- * Se extiende constructor de song y se genera constructor vacio
- * @author diana
- */
-
-public class Playlist extends Song {
-    
-    public void createPlaylist() { 
-        System.out.println("Write the name of the Playlist: /ln");
+    public Playlist(){
+        playlist = new ArrayList<Song>();
     }
 
-    public Playlist(String title, String cover, String gender, String description, int id, java.util.Date date, double duration) {
-        super(title, cover, gender, description, id, date, duration);
+    public void addSong(Song song){
+        playlist.add(song);
     }
 
-    
-    
-    public Playlist() {
+    public String getTitle(int index){
+        return playlist.get(index).getTitle();
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-
-
 }
