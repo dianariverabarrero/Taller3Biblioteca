@@ -1,14 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.biblioteca1;
 
 /**
  *
- * @author diana
+ * @author Diana Marcela Rivera, kevin Martinez
+ * @version 1.0.0
  */
+
+ /**
+  * Se crea clase canción
+  */
 public class Song {
     private String title;
     private String gender;
@@ -18,6 +18,9 @@ public class Song {
     private int id;
     private Integer date;
 
+/**
+ * Se genera contructor
+ */
     public Song(){
     }
 
@@ -30,7 +33,9 @@ public class Song {
         this.id = id;
         this.date = date;
     }
-
+/**
+*Se generan get y set
+*/
     public String getTitle() { return this.title;}
 
     public void setTitle(String title) {  this.title = title;  }

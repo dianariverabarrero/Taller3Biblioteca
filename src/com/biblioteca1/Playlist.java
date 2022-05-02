@@ -1,16 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.biblioteca1;
 
 /**
  *
- * @author diana
+ * @author Diana Marcela Rivera, kevin Martinez
+ * @version 1.0.0
  */
+
 import java.util.ArrayList;
 
+/**
+ * Se crea clase Playlist - arraylist canción, permite crear las playlist
+ */
 public class Playlist {
 
     private ArrayList<Song> playlist;
