@@ -1,5 +1,7 @@
 # Taller3Biblioteca
-@ Autor: Diana Rivera y Kevin Martinez
+@version 1.0.0 2022-05-01
+@author Diana Marcela Rivera - dianar6@hotmail.com, kevin Martinez
+
 Taller 3 softka para cantera 2, actividad en grupo.
 
 Se crea aplicación en grupo que permite crear una playlist de canciones, permite filtrar por género y año, adicionalmente, ordenar por duración y fecha.
