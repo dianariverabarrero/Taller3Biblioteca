@@ -1,10 +1,10 @@
 package com.biblioteca1;
 
 /**
- *
- * @author Diana Marcela Rivera, kevin Martinez
- * @version 1.0.0
+ * @version 1.0.0 2022-05-01
+ * @author Diana Marcela Rivera - dianar6@hotmail.com, kevin Martinez
  */
+
 
  /**
   * Se crea clase canción
